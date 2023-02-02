@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="bin\Debug\net6.0\analysereuslt\**" />
+		<EmbeddedResource Remove="bin\Debug\net6.0\analysereuslt\**" />
+		<None Remove="bin\Debug\net6.0\analysereuslt\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>4</VersionMinor>
+			<VersionMajor>2</VersionMajor>
+			<Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+		</COMReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.Data.Tables" Version="12.6.0" />
+		<PackageReference Include="Azure.Search.Documents" Version="11.4.0-beta.7" />
+		<PackageReference Include="Azure.Storage.Blobs" Version="12.11.0" />
+		<PackageReference Include="BiT.Central.Core" Version="1.0.1-dev-036" />
+		<PackageReference Include="CommandLineParser" Version="2.9.1" />
+		<PackageReference Include="CsvHelper" Version="27.2.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta1" />
+		<PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="bin\Debug\net6.0\analyseresult\filterd\" />
+		<Folder Include="bin\Debug\net6.0\analyseresult\failed\" />
+		<Folder Include="Model\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\CognitiveLibrary\CognitiveLibrary.csproj" />
+	</ItemGroup>
+</Project>

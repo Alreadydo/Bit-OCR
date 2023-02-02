@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Bit_OCR": {
+      "commandName": "Project",
+      "commandLineArgs": "-s 2020-02-01 -e 2020-03-01 -p 20"
+    }
+  }
+}

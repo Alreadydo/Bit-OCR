@@ -1,0 +1,15 @@
+﻿td.parameters-col_description > input {
+    visibility: hidden;
+}
+
+td.parameters-col_description > select {
+    visibility: hidden;
+}
+
+.swagger-ui .topbar .download-url-wrapper .select-label select {
+    border: 2px solid #61affe;
+}
+
+.swagger-ui .info .title small {
+    background: #61affe !important;
+}
